@@ -1,0 +1,14 @@
+# Middleware:
+### Types of Middleware:
+1. Request-Editing Middleware: Modifies the incoming request.
+2. Response-Editing Middleware: Modifies the outgoing response.
+3. Short-Circuiting Middleware: Stops the request pipeline and sends a response.
+4. Content-Generating Middleware: Creates content or output. 
+
+Important points related to middleware:
+Has access to both Request and Response
+May simple pass the Request to next Middleware
+May process and then pass the Request to next Middleware
+May handle the Request and short-circuit the pipline
+May Process the outgoing Respnse 
+Middlewares are executed in the order they are added
