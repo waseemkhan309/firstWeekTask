@@ -1,14 +1,35 @@
-# Middleware:
-### Types of Middleware:
+Middleware:
+
+
+Middleware:
+Types of Middleware:
 1. Request-Editing Middleware: Modifies the incoming request.
 2. Response-Editing Middleware: Modifies the outgoing response.
 3. Short-Circuiting Middleware: Stops the request pipeline and sends a response.
 4. Content-Generating Middleware: Creates content or output. 
 
 Important points related to middleware:
-Has access to both Request and Response
-May simple pass the Request to next Middleware
-May process and then pass the Request to next Middleware
-May handle the Request and short-circuit the pipline
-May Process the outgoing Respnse 
-Middlewares are executed in the order they are added
+- Has access to both Request and Response
+- May simple pass the Request to next Middleware
+- May process and then pass the Request to next Middleware
+- May handle the Request and short-circuit the pipline
+- May Process the outgoing Respnse 
+- Middlewares are exec  uted in the order they are added
+
+
+What is extenions methods?
+Use(), Run(), UseRouting(), these are the extensions method.
+What is the Difference Between MapGet and Map Extension Methods in ASP.NET Core?
+
+MapGet Method:
+- to handle HTTP GET requests. It’s used to define endpoints that respond only to GET requests.
+- to retrieve data from the server without modifying its state, such as fetching a list of items or getting details about a specific item.
+- takes a route pattern and a request delegate (a handler function). The handler function is executed when a GET request matches the specified route pattern.
+
+Map Method:
+- for handling all types of HTTP requests (such as GET, POST, PUT, DELETE, etc.). It’s more flexible than MapGet.
+- We need to use Map when we need to set up endpoints that might handle multiple types of HTTP requests or 
+when we have custom logic to determine the type of request to be handled.
+- Like MapGet, Map also takes a route pattern and a request delegate. 
+However, since Map can handle various HTTP methods, the request delegate often contains 
+logic to differentiate between these methods.
