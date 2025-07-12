@@ -1,5 +1,6 @@
 Middleware:
 
+Terminal Middleware: is the middleware that does't call the next middleware in the request pipeline.
 
 Middleware:
 Types of Middleware:
